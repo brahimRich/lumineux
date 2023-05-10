@@ -46,9 +46,17 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DetailsDialogComponent } from './details-dialog/details-dialog.component';
 
+import { InterventionFormComponent } from './intervention-form/intervention-form.component';
+
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   imports: [
+    MatStepperModule,
+    MatFormFieldModule,
+    MatInputModule,
     BrowserModule,
     MatDialogModule,
     AppRoutingModule,
@@ -57,7 +65,7 @@ import { DetailsDialogComponent } from './details-dialog/details-dialog.componen
     HttpClientModule,
     FormsModule,
     AngularFireDatabaseModule,
-      AngularFireAuthModule,
+    AngularFireAuthModule,
     AngularFireMessagingModule,
     AngularFireModule.initializeApp(environment.firebase),
     ReactiveFormsModule,
@@ -87,6 +95,8 @@ import { DetailsDialogComponent } from './details-dialog/details-dialog.componen
       {path : 'technicien/:id',component : DetailTechComponent},
       {path : 'LoginTech',component : LoginTechComponent},
       {path : 'notification',component : NotificationComponent},
+      {path : 'form' , component:InterventionFormComponent}
+
     ]),
     BrowserAnimationsModule
   ],

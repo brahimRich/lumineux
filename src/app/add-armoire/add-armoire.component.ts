@@ -146,22 +146,20 @@ updateErrorMessagee() {
 
 }
 
-submitProduct() {
+submitProduct(): void {
   this.ArmoireService.AddArmoire(this.Armoire);
-        /*const currentUrl = this.router.url;
-        if(currentUrl=='/AddArmoire' || currentUrl==''){
-          this.router.navigateByUrl('/AddDepart', { skipLocationChange: false }).then(() => {
-            window.location.reload(); 
-          });
-  }*/
+  const currentUrl = this.router.url;
+  if (currentUrl === '/AddArmoire' || currentUrl === '') {
+    this.router.navigateByUrl('/AddDepart', { skipLocationChange: false });
+  }
 }
 
-  updatePoint(){
-    window.alert("modification"+this.Armoire.id)
-    let ArmoireJson = JSON.stringify(this.Armoire);
-        console.log('modification 111 ********************'+ArmoireJson);
-    this.ArmoireService.updateArmoire(this.Armoire);
-  }
+updatePoint(): void {
+  window.alert("modification " + this.Armoire.id);
+  const ArmoireJson = JSON.stringify(this.Armoire);
+  console.log('modification 111 ********************' + ArmoireJson);
+  this.ArmoireService.updateArmoire(this.Armoire);
+}
 
 
 } 

@@ -1,3 +1,81 @@
-<app-top-bar></app-top-bar>
+<!-- <app-top-bar></app-top-bar> -->
 
-<p>home works!</p>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="../../assets/images/technicien.jpg" class ="card-img" srcset="">
+            <div class="card-body">
+                <h1 class="card-title">Gestion des techniciens </h1>
+                <!-- <p class="card-sub-title">Afficher la liste des armoires  </p> -->
+                
+                <a [routerLink]="['/Addtechnicienne']" class="card-info">
+                    <p>Ajouter un nouveaux technicien</p>
+                </a>
+
+
+                <a [routerLink]="['/Addtechnicienne']">
+                    <button class="card-btn">Lister</button>
+                </a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../../assets/images/armoire.jpg" class ="card-img" srcset="">
+            <div class="card-body">
+                <h1 class="card-title">Gestion des armoires</h1>
+                <!-- <p class="card-sub-title">Gestion des armoires </p> -->
+                
+                <a [routerLink]="['/AddArmoire']" class="card-info">
+                    <p>Ajouter un nouveaux armoire</p>
+                </a>
+
+                <a [routerLink]="['/ListeArmoire']">
+                    <button class="card-btn">Lister</button>
+                </a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../../assets/images/interv.jpg" class ="card-img" style="height: 100%;">
+            <div class="card-body">
+                <h1 class="card-title">Gestion des interventions</h1>
+                <!-- <p class="card-sub-title">Gestion des interventions </p> -->
+
+                <a [routerLink]="['/Intervention']" class="card-info">
+                    <p>Ajouter une nouvelle intervention</p>
+                </a>
+    
+                <a [routerLink]="['/Intervention']">
+                    <button class="card-btn">Lister</button>
+                </a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../../assets/images/ptLim.jpg" class ="card-img"  style="height: 100%;">
+            <div class="card-body">
+                <h1 class="card-title">Gestion des points limineux</h1>
+                <!-- <p class="card-sub-title">Gestion des pt limineux </p> -->
+                
+                <a [routerLink]="['/AddPointLumineux']" class="card-info">
+                    <p>Ajouter une nouvelle Point limineux</p>
+                </a>
+
+                <a [routerLink]="['/ListeProducts']">
+                    <button class="card-btn">Lister</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

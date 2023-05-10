@@ -1,13 +1,32 @@
 <app-top-bar></app-top-bar>
 
-<br>
+<br><br><br><br><br>
 <form *ngIf="Depart">
+  <style>
+    label {
+  display: block; /* Make label a block-level element */
+  margin-bottom: 10px; /* Add some space below the label */
+  font-weight: bold; /* Make the label text bold */
+}
+
+select {
+  width: 100%; /* Make the select element take up the full width of its container */
+  padding: 10px; /* Add some padding to the select element */
+  border-radius: 5px; /* Add some rounded corners to the select element */
+  border: 1px solid #ccc; /* Add a border to the select element */
+  box-sizing: border-box; /* Make sure the padding and border are included in the width */
+  height: 50px; /* Set the height of the select element */
+}
+
+  </style>
     <label for="techniciennes">choix d'Armoires :</label>
     <select name="armoire" id="armoire" [(ngModel)]="selectedArmoire" multiple (change)="ajouterArmoire()">
     <option *ngFor="let armoire of ListeArmoires" [ngValue]="armoire">
         {{ armoire.id }}
     </option>
     </select>
+<br>
+
     <br>
     <label for="selectedPoints"> Armoire selectioner:</label>
     <div class="techChoisi" *ngIf="selectedArmoire">
@@ -37,7 +56,7 @@
       
         <tbody>
           <tr>
-            <td>Depart 1</td>
+            <td class="dep">Depart 1</td>
             <td><input type='hidden' value="Depart 1"></td>
           </tr>
           <tr>
@@ -69,7 +88,7 @@
           </tr>
     
           <tr>
-            <td>Depart 2</td>
+            <td class="dep">Depart 2</td>
             <td><input type='hidden' value="Depart 2"></td>
           </tr>
           <tr>
@@ -101,7 +120,7 @@
           </tr>
     
           <tr>
-            <td>Depart 3</td>
+            <td class="dep">Depart 3</td>
             <td><input type='hidden' value="Depart 3"></td>
           </tr>
           <tr>
@@ -132,7 +151,7 @@
             <td><input type="text" id="nbr_lumineux8" name="nbr_lumineux8" (keyup)="updateErrorMessagee()" [(ngModel)]="Depart.caracteristiqueList[8].nbr_lumineux"></td>
           </tr>
           <tr>
-            <td>Observation</td>
+            <td class="dep">Observation</td>
             <td style="width: 100%;"><input type="text" id="observation" name="observation" (keyup)="updateErrorMessagee()" [(ngModel)]="Depart.observation"></td>
           </tr>
         </tbody>

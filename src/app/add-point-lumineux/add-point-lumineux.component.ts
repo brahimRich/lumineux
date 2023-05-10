@@ -10,6 +10,18 @@ import { FormGroup, FormControl, Validators,FormBuilder } from '@angular/forms';
   styleUrls: ['./add-point-lumineux.component.css']
 })
 export class AddPointLumineuxComponent implements OnInit {
+
+  firstFormGroup = this._formBuilder.group({
+    firstCtrl: ['', Validators.required],
+  });
+  secondFormGroup = this._formBuilder.group({
+    secondCtrl: ['', Validators.required],
+  });
+
+  
+  isLinear = false;
+
+
   Mofifer : boolean = false;
   boutonDesactive: boolean = true;
   errorMessageN='';
@@ -40,7 +52,7 @@ export class AddPointLumineuxComponent implements OnInit {
 
   @Output() productAdded = new EventEmitter<PointLumineux>();
 
-  constructor(private productService: ProductService,private route: ActivatedRoute,private formBuilder: FormBuilder) { 
+  constructor(private _formBuilder: FormBuilder,private productService: ProductService,private route: ActivatedRoute,private formBuilder: FormBuilder) { 
   }
  
 

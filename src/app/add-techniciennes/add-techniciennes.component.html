@@ -1,5 +1,7 @@
-<app-top-bar></app-top-bar>
+ <app-top-bar></app-top-bar>
 
+
+<!--
 <p>add-techniciennes works!</p>
  
 <div class="container">
@@ -7,10 +9,10 @@
     <form class="well form-horizontal" action=" " method="post"  id="contact_form">
 <fieldset>
 
-<!-- Form Name -->
+
 <legend>Add a new technician!</legend>
 
-<!-- Text input-->
+
 
 <div class="form-group">
   <label class="col-md-4 control-label">Nom</label>  
@@ -22,7 +24,7 @@
   </div>
 </div>
 
-<!-- Text input-->
+
 
 <div class="form-group">
   <label class="col-md-4 control-label" >Prenom</label> 
@@ -34,7 +36,7 @@
   </div>
 </div>
 
-<!-- Text input-->
+
        <div class="form-group">
   <label class="col-md-4 control-label">CIN</label>  
     <div class="col-md-4 inputGroupContainer">
@@ -46,7 +48,7 @@
 </div>
 
 
-<!-- Text input-->
+
        
 
 <br>
@@ -57,4 +59,91 @@
 </fieldset>
 </form>
 </div>
+     -->
+ 
+
+
+
+<!-- 
+ <!DOCTYPE html>
+<html>
+<head>
+<title>Creative Colorlib SignUp Form</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+
+<link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+
+</head>
+<body>
+
+<br><br><br>
+
+	<form class="well form-horizontal" action=" " method="post"  id="contact_form">
+    <div class="main-w3layouts wrapper">
+      <h1 style="color:rgb(89, 89, 89)">Ajouter un nouveau technicien</h1>
+      <div class="main-agileinfo">
+        <div class="agileits-top">
+          <form action="#" method="post">
+            <input class="text" placeholder="Nom" class="form-control"  id="nom" name="nom" type="text" (keyup)="updateErrorMessagee()" [(ngModel)]="techniciennes.nom" required=""><br>
+			   		<input class="text" placeholder="Prenom" class="form-control"  id="prenom" name="prenom" type="text" (keyup)="updateErrorMessagee()" [(ngModel)]="techniciennes.prenom"required=""><br>
+			   		<input class="text"  name="password"  placeholder="CIN" class="form-control" name="cin" id="cin" type="text" (keyup)="updateErrorMessagee()" [(ngModel)]="techniciennes.cin" required="">
     
+            <input type="submit" id="sb" value="Ajouter" *ngIf="!Mofifer" type="submit" [disabled]="boutonDesactive" (click)="submitProduct()">
+  
+          </form>
+        </div>
+      </div>
+      
+      
+    </div>
+  </form>
+  
+</body>
+</html> -->
+
+
+
+
+
+<br><br><br><br><br><br><br>
+<div class="container">
+	<form>
+		<div class="field" tabindex="1">
+			<label for="username">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+          <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+        </svg>
+        Nom
+			</label>
+			<input  placeholder="Nom" class="form-control"  id="nom" name="nom" type="text" (keyup)="updateErrorMessagee()" [(ngModel)]="techniciennes.nom" required="">
+		</div><br>
+		<div class="field" tabindex="2">
+			<label for="email">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-vcard-fill" viewBox="0 0 16 16">
+          <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm9 1.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 0-1h-4a.5.5 0 0 0-.5.5ZM9 8a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 0-1h-4A.5.5 0 0 0 9 8Zm1 2.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 0-1h-3a.5.5 0 0 0-.5.5Zm-1 2C9 10.567 7.21 9 5 9c-2.086 0-3.8 1.398-3.984 3.181A1 1 0 0 0 2 13h6.96c.026-.163.04-.33.04-.5ZM7 6a2 2 0 1 0-4 0 2 2 0 0 0 4 0Z"/>
+        </svg>
+        Prenom
+			</label>
+			<input placeholder="Prenom" class="form-control"  id="prenom" name="prenom" type="text" (keyup)="updateErrorMessagee()" [(ngModel)]="techniciennes.prenom"required="">
+		</div><br>
+    <div class="field" tabindex="3">
+			<label for="email">
+        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-person-lock" viewBox="0 0 16 16">
+          <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 5.996V14H3s-1 0-1-1 1-4 6-4c.564 0 1.077.038 1.544.107a4.524 4.524 0 0 0-.803.918A10.46 10.46 0 0 0 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h5ZM9 13a1 1 0 0 1 1-1v-1a2 2 0 1 1 4 0v1a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-2Zm3-3a1 1 0 0 0-1 1v1h2v-1a1 1 0 0 0-1-1Z"/>
+        </svg>
+        CIN
+			</label>
+      <input name="password"  placeholder="CIN" class="form-control" name="cin" id="cin" type="text" (keyup)="updateErrorMessagee()" [(ngModel)]="techniciennes.cin" required="">
+		</div><br>
+    
+    
+		<button type="reset" type="submit" id="sb" value="Ajouter" *ngIf="!Mofifer" type="submit" [disabled]="boutonDesactive" (click)="submitProduct()">Send Me Message</button>
+		
+	</form>
+</div>
+
+<!-- This is not part of Pen -->
+<a class="me" href="https://codepen.io/uzcho_/pens/popular/?grid_type=list" target="_blank" style="color:#000"></a>

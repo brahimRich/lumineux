@@ -30,6 +30,18 @@ export interface userTech {
 
     constructor(private http: HttpClient) {}
 
+
+    getAllAdmin(): Observable<any> {
+        return this.http.get<any>(this.getURL);
+    }
+
+    FindAdmin(email: String , password : String): Observable<userTech> {
+        return this.getAllAdmin().pipe(
+          map(users => users.find((user: userTech) => user.email === email && user.password === password))
+        );
+    }
+     
+
     AddAdminTechnicien(userTech: userTech) {
         let userTechJson = JSON.stringify(userTech);
         console.log('ajout de j ********************'+userTechJson);

@@ -1,0 +1,107 @@
+.mat-stepper-horizontal {
+    margin-top: 40px;
+  }
+  
+  .mat-mdc-form-field {
+    margin-top: 38px;
+  }
+  
+
+  form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+
+.nn{
+  margin-left: 36%;
+}
+
+.nnn{ 
+  margin-left: 15%;
+}
+
+.nnnn{
+  margin-right: 130px;
+}
+
+.caontainer{
+  position: absolute;
+  top: 90px;
+  width: 60%;
+  margin-left: 18%;
+  background-color: white;
+  height: fit-content;
+  box-shadow: 5px 5px 15px rgb(240, 240, 240);
+  border-radius: 10px;
+}
+
+.caontainer form input{
+  background-color: transparent;
+}
+
+.switch1{
+  padding: 17px;
+  background-color: rgb(46, 46, 255);
+  color: whitesmoke;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  border: none;
+  margin-right: 90px;
+  border-radius: 10px;
+   margin-top: 20px;
+   margin-left: 45%;
+  width: 90px;
+}
+
+.switch1:hover{
+  background-color: rgb(255, 255, 255);
+  color: rgb(92, 184, 103);
+  letter-spacing: 2px;
+  box-shadow: none;
+  transition: .5s;
+}
+
+.switch2{
+  padding: 17px;
+  background-color: rgb(197, 197, 197);
+  color: rgb(101, 101, 101);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  border: none;
+  margin-right: 90px;
+  border-radius: 10px;
+  width: 90px;
+  margin-left: 210px;
+}
+
+.switch2:hover{
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  letter-spacing: 2px;
+      box-shadow: none;
+      transition: .5s;
+}
+
+
+.switch3{
+  padding: 17px;
+  background-color: rgb(46, 46, 255);
+  color: whitesmoke;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  border: none;
+  margin-right: 90px;
+  border-radius: 10px;
+  width: 90px;
+  margin-left: 70px;
+}
+
+.switch3:hover{
+  background-color: rgb(255, 255, 255);
+  color: rgb(92, 184, 103);
+  letter-spacing: 2px;
+  box-shadow: none;
+  transition: .5s;
+}

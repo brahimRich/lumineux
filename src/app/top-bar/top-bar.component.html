@@ -1,13 +1,31 @@
+<!-- <li data-active="true"><a [routerLink]="['/Home']">Home</a></li>
+<li data-active="false"><a [routerLink]="['/ListeProducts']">Point Lumineux</a></li>
+<li data-active="false"><a [routerLink]="['/ListeArmoire']">Armoires</a></li>
+ <li data-active="false"><a [routerLink]="['/AddPointLumineux']">Ajout Point Lumineux</a></li> -->
+<!-- <li data-active="false"><a [routerLink]="['/AddArmoire']">Ajout Armoire</a></li> -->
+<!-- <li data-active="false"><a [routerLink]="['/Addtechnicienne']">Ajout techniciennes</a></li> 
+<li data-active="false"><a [routerLink]="['/Intervention']"> Intervention</a></li>
+ -->
 
 
-<nav class="navbar">
-  <a [routerLink]="['/Home']"><h1>Home</h1></a>
-  <a [routerLink]="['/ListeProducts']">Liste des Point Lumineux</a>
-  <a [routerLink]="['/ListeArmoire']">Liste des armoires</a>
-  <a [routerLink]="['/AddPointLumineux']">Ajout Point Lumineux</a>
-  <a [routerLink]="['/AddArmoire']">Ajout Armoire</a>
-  <a [routerLink]="['/Addtechnicienne']">Ajout techniciennes</a>
-  <a [routerLink]="['/Intervention']">Ajout Intervention</a>
-  <a [routerLink]="['/AddDepart']">Ajout un Depart</a>
-</nav>
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+ </head>
+ <body>
+    <header class="header">
+        <a [routerLink]="['/Home']" class="logo">LightX</a>
 
+        <nav class="navbar">
+          <a [routerLink]="['/ListeProducts']">Point Limineux</a>
+          <a [routerLink]="['/Addtechnicienne']">Techniciens</a>
+          <a [routerLink]="['/Intervention']">Interventions</a>
+          <a [routerLink]="['/HomListeArmoiree']">Armoires</a>
+        </nav>
+    </header>
+ </body>
+ </html>

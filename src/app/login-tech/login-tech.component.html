@@ -1,4 +1,4 @@
-<div class="login-wrap">
+<!-- <div class="login-wrap">
 	<div class="login-html">
 		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
 		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
@@ -58,4 +58,43 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/booststrap/3.4.1/css/bootstrap.min.css">
+	
+</head>
+<body>
+	<div class="main">
+		<div class="logo"></div>
+		<div class="title">Login</div>
+		<form action="">
+			<div class="credentials">
+				<div class="username">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+						<path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+						<path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+					  </svg> &nbsp; 
+					<input type="text" name="email" placeholder="Username" required="" id="email" [(ngModel)]="email">
+				</div> 
+				<div class="password">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
+						<path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+					  </svg>&nbsp; 
+					<input name="password" placeholder="Password" required=""  type="password" [(ngModel)]="password">
+				</div>
+			</div>
+			<input type="submit" (click)="onSubmit()" class="submit" value="Sign In">
+		</form>
+		<div class="link">
+			<a href="#">Forget Password</a>  
+		</div>
+	</div>
+</body>
+</html>

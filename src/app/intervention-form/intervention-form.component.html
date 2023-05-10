@@ -1,186 +1,4 @@
-<!-- 
-<app-top-bar></app-top-bar>
-
-<form *ngIf="PointLumineux" class="navbar-form">
-
-    <br> 
-    <div>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" (keyup)="updateErrorMessagee()" [(ngModel)]="PointLumineux.type" >
-      <div *ngIf="errorMessageN" [ngClass]="{'error-message': true}">
-        <div>{{errorMessageN}}</div>
-      </div>
-    </div>
-    
-  
-    <div>
-      <label for="longitude">Longitude:</label>
-      <input type="number" id="longitude" name="longitude" (keyup)="updateErrorMessagee()" [(ngModel)]="PointLumineux.longitude">
-      <div *ngIf="errorMessageLo" [ngClass]="{'error-message': true}">
-        <div>{{errorMessageLo}}</div>
-      </div>
-    </div>
-  
-    <div>
-      <label for="latitude">Latitude:</label>
-      <input type="number" id="latitude" name="latitude" (keyup)="updateErrorMessagee()" [(ngModel)]="PointLumineux.latitude">
-      <div *ngIf="errorMessageLa" [ngClass]="{'error-message': true}">
-        <div>{{errorMessageLa}}</div>
-      </div>
-    </div>
-  
-    <div>
-      <label for="allume">Allumé:</label>
-      <input type="text" id="allume" name="allume"  [(ngModel)]="PointLumineux.allume">
-    </div>
-
-    <div>
-      <label for="Numero">Numéro:</label>
-      <input type="number" id="Numero" name="Numero" (keyup)="updateErrorMessagee()" [(ngModel)]="PointLumineux.numero">
-      <div *ngIf="errorMessageLo" [ngClass]="{'error-message': true}">
-        <div>{{errorMessageLo}}</div>
-      </div>
-    </div>
-
-    <div>
-      <label for="Marque">Marque:</label>
-      <input type="text" id="Marque" name="Marque" (keyup)="updateErrorMessagee()" [(ngModel)]="PointLumineux.marque">
-      <div *ngIf="errorMessageLo" [ngClass]="{'error-message': true}">
-        <div>{{errorMessageLo}}</div>
-      </div>
-    </div>
-
-    <div>
-      <label for="degre_prot">Degré de protection:</label>
-      <input type="text" id="degre_prot" name="degre_prot" (keyup)="updateErrorMessagee()" [(ngModel)]="PointLumineux.degre_prot">
-      <div *ngIf="errorMessageLo" [ngClass]="{'error-message': true}">
-        <div>{{errorMessageLo}}</div>
-      </div>
-    </div>
-
-    <div>
-      <label for="puissance_max">Puissance maximale:</label>
-      <input type="text" id="puissance_max" name="puissance_max" (keyup)="updateErrorMessagee()" [(ngModel)]="PointLumineux.puissance_max">
-      <div *ngIf="errorMessageLo" [ngClass]="{'error-message': true}">
-        <div>{{errorMessageLo}}</div>
-      </div>
-    </div>
-
-    <div>
-      <label for="temperature">Température:</label>
-      <input type="number" id="temperature" name="temperature" (keyup)="updateErrorMessagee()" [(ngModel)]="PointLumineux.temperature">
-      <div *ngIf="errorMessageLo" [ngClass]="{'error-message': true}">
-        <div>{{errorMessageLo}}</div>
-      </div>
-    </div>
-
-    <div>
-      <label for="class_electrique">Classe électrique:</label>
-      <input type="text" id="class_electrique" name="class_electrique" (keyup)="updateErrorMessagee()" [(ngModel)]="PointLumineux.class_electrique">
-      <div *ngIf="errorMessageLo" [ngClass]="{'error-message': true}">
-        <div>{{errorMessageLo}}</div>
-      </div>
-    </div>
-
-    <div>
-      <label for="date_accussition">Date d'acquisition:</label>
-      <input type="date" id="date_accussition" name="date_accussition" (keyup)="updateErrorMessagee()" [(ngModel)]="PointLumineux.date_accussition">
-      <div *ngIf="errorMessageLo" [ngClass]="{'error-message': true}">
-        <div>{{errorMessageLo}}</div>
-      </div>
-    </div>
-
-    <div>
-      <label for="class_electrique">Classe électrique:</label>
-      <input type="text" id="class_electrique" name="class_electrique" (keyup)="updateErrorMessagee()" [(ngModel)]="PointLumineux.class_electrique">
-      <div *ngIf="errorMessageLo" [ngClass]="{'error-message': true}">
-        <div>{{errorMessageLo}}</div>
-      </div>
-    </div>
-
-
-   
-    <fieldset>
-      <legend>Coordonnées:</legend>
-      <label for="x">X:</label>
-      <input type="number" id="x" name="x" [(ngModel)]="PointLumineux.coordonnees.x" >
-      <label for="y">Y:</label>
-      <input type="number" id="y" name="y" [(ngModel)]="PointLumineux.coordonnees.y">
-    </fieldset>
-
-
-    <fieldset>
-      <legend>Adresse:</legend>
-      <label for="rue">Rue:</label>
-      <input type="text" id="rue" name="rue" [(ngModel)]="PointLumineux.adresse.rue">
-      
-      <label for="quartier">Quartier:</label>
-      <input type="text" id="quartier" name="quartier" [(ngModel)]="PointLumineux.adresse.quertier">
-    </fieldset>
-
-    <br>
-    <button *ngIf="!Mofifer" [disabled]="boutonDesactive" (click)="submitProduct()">Ajouter</button>
-    <button *ngIf="Mofifer" [disabled]="boutonDesactive" (click)="updatePoint()">Mofier</button>
-  </form>
-  
-
-
-  <div class="container">
-    <form>
-      <div class="field" tabindex="1">
-        <label for="username">
-          <i class="far fa-user"></i>Your Name
-        </label>
-        <input name="username" type="text" placeholder="e.g. john doe" required>
-      </div>
-
-      <div>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" (keyup)="updateErrorMessagee()" [(ngModel)]="PointLumineux.type" >
-        <div *ngIf="errorMessageN" [ngClass]="{'error-message': true}">
-          <div>{{errorMessageN}}</div>
-        </div>
-      </div>
-
-      <div class="field" tabindex="2">
-        <label for="email">
-          <i class="far fa-envelope"></i>Your Email
-        </label>
-        <input name="email" type="text" placeholder="email@domain.com" required>
-      </div>
-      <div class="field" tabindex="3">
-        <label for="message">
-          <i class="far fa-edit"></i>Your Message
-        </label>
-        <textarea name="message" placeholder="type here" required></textarea>
-      </div>
-      <button type="reset">Send Me Message</button>
-      <div class="social-media">
-        <span>
-          Get In Touch<i class="fas fa-long-arrow-alt-right"></i>
-        </span>
-        <a class="fab fa-facebook-f" href="https://facebook.com/uzcho" target="blank_"></a>
-        <a class="fab fa-twitter" href="https://twitter.com/uzcho_" target="blank_"></a>
-        <a class="fab fa-instagram" href="https://www.instagram.com/uzcho_" target="blank_"></a>
-        <a class="fab fa-codepen" href="https://codepen.io/uzcho_" target="blank_"></a>
-      </div>
-    </form>
-  </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- <div class="container rb-10">
+<!-- <div class="container rb-10">
 
   <form (ngSubmit)="submit()">
     <div *ngIf="step == 1">
@@ -248,8 +66,8 @@
  -->
 
 
- 
  <app-top-bar></app-top-bar>
+
 
 
  <div class="caontainer">
@@ -260,7 +78,7 @@
  <mat-stepper [linear]="isLinear" #stepper>
    <mat-step [stepControl]="firstFormGroup">
      <form [formGroup]="firstFormGroup" *ngIf="PointLumineux" >
-       <ng-template matStepLabel>First step</ng-template>
+       <ng-template matStepLabel>Fill out your name</ng-template>
  
        <mat-form-field appearance="fill">
          <mat-label>Name</mat-label>
@@ -305,7 +123,7 @@
    </mat-step>
  
  
-   <mat-step [stepControl]="secondFormGroup" label="Second step">
+   <mat-step [stepControl]="secondFormGroup" label="Continue">
      <form [formGroup]="secondFormGroup">
  
        <mat-form-field appearance="fill">
@@ -349,36 +167,18 @@
  
        <div>
          <button mat-button matStepperPrevious class="switch2">Previous</button>
-         <button mat-button matStepperNext class="switch3">Submit</button>
-         <!-- <button *ngIf="Mofifer" [disabled]="boutonDesactive" (click)="updatePoint()">Mofier</button> -->
+         <button mat-button matStepperNext class="switch3">Next</button>
        </div>
      </form>
    </mat-step>
   <mat-step>
     <ng-template matStepLabel>Done</ng-template>
-    <div class="validation">
-      <p>Vous avez bien enregistrer cette nouvelle point lumineux</p>
-    <img src="../../assets/images/accept.png" alt="" style="height: 70px;width: 70px;float: left;margin-left: 42%;">
+    <p>You are now done.</p>
+    <div>
+      <button mat-button matStepperPrevious class="switch">Back</button>
+      <button mat-button (click)="stepper.reset()" class="switch">Reset</button>
     </div>
-
-    <div class="add">
-      
-        <a [routerLink]="['/AddPointLumineux']" style="text-decoration: none; color: rgb(74, 121, 215);">
-          Ajouter une autre P.L
-        </a>
-       
-      
-
-
-    </div>
-    
-    
   </mat-step>
-  <div>
-    <!-- <button mat-button matStepperPrevious class="switch">Back</button>
-    <button mat-button (click)="stepper.reset()" class="switch">Reset</button> -->
-   
-  </div>
 </mat-stepper>
 
  </div>

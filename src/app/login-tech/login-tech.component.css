@@ -1,4 +1,4 @@
-body{
+/* body{
 	margin:0;
 	color:#6a6f8c;
 	background:#c8c8c8;
@@ -147,4 +147,114 @@ a{color:inherit;text-decoration:none}
 }
 .foot-lnk{
 	text-align:center;
+} */
+
+
+
+
+body{
+	margin: 0;
+	height: 95vh;
+	width: 100 vw;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	background-color: #fff;
+	color: #485563;
+	justify-content: center;
+	background-size: cover;
+}
+
+
+.main{
+	width: 400px;
+	height: 600px;
+	padding: 10px 25px 35px 35px;
+	margin-left: -60px;
+	margin-top: 250px;
+	border-radius: 20px;
+	font-family: sans-serif;
+	font-weight: 700;
+}
+
+.title{
+	text-align: center;
+	font-size: 40px;
+	color: #555;
+	letter-spacing: .5px;
+	margin: px;
+	font-family: gotham;
+}
+
+.credentials{
+	width: 100%;
+	padding: 2px 5px 0px 5px;
+}
+
+
+.credentials input{
+	border: none;
+	outline: none;
+	background: none;
+	font-size: 18px;
+	color: #555;
+	padding: 20px 10px 20px 5px;
+	letter-spacing: 1px;
+}
+
+
+.username{
+	margin-bottom: 20px;
+	border-bottom: 2px solid #c2c4c3;
+	transition: .5s ease;
+}
+
+.username:hover{
+	border-bottom: 3px solid #485563;
+}
+
+
+.password{
+	margin-bottom: 30px;
+	border-bottom: 2px solid #c2c4c3;
+	transition: .5s ease;
+}
+
+.password:hover{
+	border-bottom: 3px solid #485563;
+}
+
+
+.submit{
+	outline: none;
+	border: none;
+	width: 100%;
+	height: 60px;
+	border-radius: 30px;
+	color: #fff;
+	font-size: 20px;
+	font-weight: 700;
+	text-align: center;
+	background-image: linear-gradient(to right, #485563 , #29323c 51%, #485563 100%);
+	background-size: 200%;
+	box-shadow: 3px 3px 8px #b1b1b1,
+				-3px -3px 8px #fff;
+	transition: .5s;
+}
+
+
+.submit:hover{
+	background-position: right;
+}
+
+
+.link{
+	margin: 20px;
+	text-align: center;
+}
+
+.link a{
+	color: #aaa;
+	font-size: 15px;
+	text-decoration: none  ;
 }

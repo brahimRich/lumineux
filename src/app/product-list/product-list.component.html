@@ -1,62 +1,7 @@
-<style>
-  /* Style pour le titre "Les Points Lumineux" */
-h2 {
-  font-size: 2em;
-  text-align: center;
-  margin-bottom: 1em;
-}
 
-/* Style pour la barre de recherche */
-input[type="text"] {
-  padding: 0.5em;
-  margin-bottom: 1em;
-  width: 98.5%;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-}
 
-/* Style pour les produits */
-h3 {
-  margin-top: 1.5em;
-  font-size: 1.5em;
-}
 
-p {
-  margin: 0.5em 0;
-}
-
-/* Style pour les boutons */
-button {
-  background-color: #4CAF50; /* couleur de fond */
-  color: white; /* couleur de texte */
-  padding: 0.5em 1em; /* taille du bouton */
-  border: none; /* pas de bordure */
-  border-radius: 4px; /* coins arrondis */
-  cursor: pointer; /* curseur en forme de main */
-  margin-right: 0.5em; /* espace entre les boutons */
-}
-
-/* Style pour le bouton "Share" */
-button:nth-of-type(1) {
-  background-color: #2196F3; /* couleur de fond différente */
-}
-
-/* Style pour le bouton "Supprimer" */
-button:nth-of-type(2) {
-  background-color: #f44336; /* couleur de fond différente */
-}
-
-/* Style pour le bouton "Modifier" */
-button:nth-of-type(3) {
-  background-color: #FFC107; /* couleur de fond différente */
-}
-
-</style>
-
-<app-top-bar></app-top-bar>
-<h2>Les Points Lumineux</h2>
-<input type="text" [(ngModel)]="searchText" placeholder="Rechercher un produit" (keyup)="onSearchTermChanged()">
-<div *ngFor="let product of products">
+<!-- <div *ngFor="let product of products">
   <h3>
     <a
       [title]="product.type + ' details'"
@@ -70,4 +15,97 @@ button:nth-of-type(3) {
   <button type="button" (click)="share()" >Share</button>
   <button (click)="delete(product)" >Supprimer</button>
   <button (click)="update(product)" >Modifier</button>
+</div> -->
+
+
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Table 02</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+	</head>
+	<body>
+
+    <app-top-bar></app-top-bar><br><br><br>
+
+    <h2>Liste des Points Lumineux</h2>
+
+
+    <!-- <input type="text" [(ngModel)]="searchText" placeholder="Rechercher un produit" (keyup)="onSearchTermChanged()">
+ -->
+
+ <div class="input-group">
+  <input type="text" class="form-control" [(ngModel)]="searchText" placeholder="Type to search" (keyup)="onSearchTermChanged()">
+  <div class="input-group-append">
+    <span class="input-group-text"><i class="fa fa-search"></i></span>
+  </div>
 </div>
+
+
+<div class="add">
+  <a [routerLink]="['/AddPointLumineux']">
+    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+    </svg>
+  </a>
+</div>
+
+	<section class="ftco-section">
+		<div class="container">
+      
+			<div class="row">
+				<div class="col-md-12">
+					<div class="table-wrap">
+						<table class="table">
+						  <thead class="thead-dark">
+
+                <tr>
+                  <th>ID</th>
+                  <th>Allume</th>
+                  <th>Type</th>
+                  <th>Marque</th>
+						      <th style="text-align: center; width: 440px;">Actions</th>
+                </tr>
+
+						  </thead>
+						  <tbody>
+						    <tr class="alert" role="alert" *ngFor="let product of products">
+						       <th scope="row" ><!--{{product.id}}-->7</th> <!--*ngIf="product.id"-->
+                  <td ><!--{{product.allume}}-->oui</td><!--*ngIf="product.allume"-->
+						      <td><a [title]="product.type + ' details'" [routerLink]="['/products', product.reference]">{{ product.type }}</a></td>
+						      <td><!--{{ product.marque }}-->Poto</td><!--*ngIf="product.marque"-->
+                  <td>
+                    <button (click)="share()" class="btn1">Share</button>
+                    <button (click)="delete(product)" class="btn2">Supprimer</button>
+                    <button (click)="update(product)" class="btn3">Modifier</button>
+                  </td>
+						    </tr>
+						  </tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+
+	</body>
+</html>
+
+
