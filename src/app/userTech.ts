@@ -25,21 +25,10 @@ export interface userTech {
     providedIn: 'root'
   })
   export class UserTechService {
-    private getURL = 'http://localhost:4200/api/admin/getAll';
-    private AddURL= 'http://localhost:4200/api/admin/add';
+    private getURL = 'http://localhost:4200/api/technicienne/getAll';
+    private AddURL= 'http://localhost:4200/api/technicienne/add';
 
     constructor(private http: HttpClient) {}
-
-    getAllAdmin(): Observable<any> {
-        return this.http.get<any>(this.getURL);
-      }
-
-    FindAdmin(email: String , password : String): Observable<userTech> {
-        return this.getAllAdmin().pipe(
-          map(users => users.find((user: userTech) => user.email === email && user.password === password))
-        );
-    }
-     
 
     AddAdminTechnicien(userTech: userTech) {
         let userTechJson = JSON.stringify(userTech);
@@ -54,4 +43,15 @@ export interface userTech {
           }
         );
       }
+
+      getAllTechn(): Observable<any> {
+        return this.http.get<any>(this.getURL);
+      }
+
+      FindTechn(email: String , password : String): Observable<userTech> {
+        return this.getAllTechn().pipe(
+          map(users => users.find((user: userTech) => user.email === email && user.password === password))
+        );
+    }
+
   }

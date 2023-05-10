@@ -1,0 +1,21 @@
+<app-top-bar-tech></app-top-bar-tech>
+
+
+<h2>Les Intervention</h2>
+
+<input type="text" [(ngModel)]="searchText" placeholder="Rechercher une intervention" (keyup)="onSearchTermChanged()">
+<div *ngFor="let inter of ListeIntervention">
+  
+    <p> 
+      L'intutuller : {{ inter.intitule_Intervention }}
+    </p>
+    <p> 
+        Membre :<div *ngFor="let tech of inter.techniciennes">
+            * {{ tech.nom }}
+            </div>
+
+</div> 
+<br><br>
+************ Notification **********************<br>
+
+<app-notification></app-notification>

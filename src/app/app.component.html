@@ -7,18 +7,16 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-
 <!-- Toolbar -->
-
- <!-- <div class="content" role="main">
+  <div class="content" role="main" *ngIf="admin!=0">
   <router-outlet *ngIf="user!=null"></router-outlet>
   <app-login *ngIf="user==null" ></app-login>
-</div>   -->
+</div>   
 
-<div class="content" role="main">
+<div class="content" role="main" *ngIf="admin==0">
   <router-outlet *ngIf="userTech!=null"></router-outlet>
   <app-login-tech *ngIf="userTech==null" ></app-login-tech >
-</div>  
+</div> 
 
 <!-- 
 

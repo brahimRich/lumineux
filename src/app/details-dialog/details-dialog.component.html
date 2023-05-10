@@ -1,0 +1,18 @@
+<div class="container">
+    <h2><i class="fas fa-bell"></i> <strong>Titre: {{ data.title }}</strong></h2>
+    <h3>Message: {{ data.message }}</h3>
+    <h3>Type d'intervention: {{ data.intervention.type }}</h3>
+    <h3>Intutulle de Intervention : {{ data.intervention.type }}</h3>
+    <h3>date de l'intervention : {{ data.intervention.type }}</h3>
+    <h3>Les technicinne de sortie :</h3>
+    <li *ngFor="let tech of techs" style="color :red;">
+            <h3>Le : {{ tech.nom }}</h3>
+    </li>
+
+    <h3>Les Point lumineux distignée :</h3>
+    <li *ngFor="let point of data.intervention.pointLumineuxList " style="color :red;">
+            <h3>Le : {{ point.type }}</h3>
+    </li>
+
+  </div>
+  

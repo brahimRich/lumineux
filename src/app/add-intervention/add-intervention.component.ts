@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
 import { CartService } from '../cart.service';
 
 import { HttpClient } from '@angular/common/http';
+import { Notification } from './../notification/notification';
 
 @Component({
   selector: 'app-add-intervention',
@@ -40,8 +41,7 @@ export class AddInterventionComponent {
     ],
     pointLumineuxList : [
       
-    ],
-    interventionList : null,
+    ]
   }
   
    
@@ -129,8 +129,8 @@ updateDepart(){
 
 
 submitIntervention() {
-  /*console.log("intervention "+this.Intervention.techniciennes[0].nom)
-  console.log("intervention "+this.Intervention.techniciennes[1].nom)*/
+  
+
   this.InterventionService.AddIntervention(this.Intervention);
 
    /*   const currentUrl = this.router.url;
